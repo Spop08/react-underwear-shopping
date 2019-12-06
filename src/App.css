@@ -1,0 +1,930 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/font/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('/assets/font/Montserrat-Bold.ttf');
+}
+
+
+@font-face {
+  font-family: 'Playfair Display SC';
+  src: url('/assets/font/playfairdisplaysc-regular.ttf');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/font/PlayfairDisplay-Regular.ttf');
+}
+
+.logo {
+  margin-left: 25%;
+  margin-top: 26px;
+}
+
+.header_main {
+  height: 728px;
+  background: #f9f5ff;
+}
+
+.header {
+  margin-top: 88px;
+  height: 39px;
+  font-family: "Playfair Display SC";
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 39px;
+  letter-spacing: 0.7909091px;
+}
+
+.header_title {
+  margin-top: 120px;
+  text-align: center
+}
+
+.header_title p{
+  font-family: "Playfair Display";
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 69px;
+  text-align: center;
+  margin: auto;
+}
+
+.register_title p{
+  font-family: "Playfair Display SC";
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 69px;
+  text-align: center;
+  margin: auto;
+}
+
+.btn {
+  width: 168px;
+  height: 54px;
+}
+
+#rectangle {
+  visibility: hidden;
+  width: 168px;
+  height: 54px;
+  background: #e9dff8;
+}
+
+.login {
+  width: 41.78px;
+  height: 17px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.3818184px;
+  text-transform: capitalize;
+
+}
+.middle {
+  margin: auto;
+  text-align: center;
+}
+
+.header_title .createAcco{
+  width: 295px;
+  height: 54px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.3818184px;
+  background: #e9dff8;
+  margin-left:20px;
+  margin-right: 20px;
+  text-transform: capitalize;
+}
+
+.header_title .findBride{
+  width: 295px;
+  height: 54px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.3818184px;
+  background: #c8b3e8;
+  margin-left:20px;
+  margin-right: 20px;
+  text-transform: none;
+}
+.header_title .accountBtn{
+  margin-top: 50px;
+}
+
+.header_title .createAccoSub {
+  width: 295px;
+  height: 54px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.3818184px;
+  background: #e9dff8;
+  text-transform: capitalize;
+  margin: auto;
+  /* box-shadow: 0px 10px 10px #aaa9a9; */
+}
+
+.foot_image {
+  margin-bottom: -150px;
+  margin-right: -50px;
+}
+
+.main-content {
+  margin-top: 25%;
+  
+}
+
+.mainbody_title {
+  font-family: "Playfair Display";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 43px;
+}
+.mainbody_text {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  width: 90%;
+}
+.group_image {
+  width: 100%;
+}
+
+.footer-bar {
+  padding-bottom: 150px;
+  background: #fff8f5;
+  margin-top: 10%;
+  
+}
+
+.footer-btn {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.4363638px;
+  height:20px;
+}
+
+.footer-bar p {
+  opacity: 0.5;
+ 
+  height: 25px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.3545456px;
+}
+
+.mobile-based-item {
+  display: none !important;
+}
+.profile_logo p{
+  height: 21px;
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.4636365px;
+  display: inline;
+}
+
+.profile_logo img {
+  margin: 0px;
+}
+
+.size_bar {
+  height: 100px;
+  border: solid 1px #7f7f7f;
+}
+
+.profile_logo .size{
+  width: 43px;
+  height: 43px;
+  background: #e9dff8;
+  padding: 5px;
+  margin-left: 10px;
+}
+.sidebar_button Button{
+  height: 94px;
+  width: 100%;
+  max-width: 226px;
+  background: #e9dff8;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.3818184px;
+  text-transform: capitalize;
+  margin: 5px;
+}
+.product-list Button{
+  width: 100%;
+  color: #fff;
+  background: #c9b2ec;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.3818184px;
+  text-transform: capitalize;
+}
+.product-list Button:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.size_bar_item {
+  margin: auto;
+}
+.photomargin{
+  margin-top: 104px;
+}
+.mainProduct {
+  text-align: center;
+}
+.class-filter{
+  padding-left: 60px;
+  padding-right: 50px;
+}
+.add_friend img {
+  width: 37px;
+}
+@media screen and (max-width: 995px) {
+  .buttonmargin{
+    padding-right: calc(45px - 995px + 100% )!important;
+  }
+  .class-filter{
+    padding-right: 0px!important;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .class-filter{
+    padding-left:0px!important;
+  }
+}
+
+@media screen and (max-width: 772px) {
+  .class-filter{
+    padding:0 60px!important;
+  }
+  .btn_friend{
+    margin-top: 5px!important;
+  }
+}
+.desktop-responsive{
+  display: flex;
+  margin-left: -15px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 600px) {
+  .sidebar_button Button{
+    height: 55px;
+    margin-top: 20px!important;
+  }
+.pink-button{
+    height: 35px!important;
+  }  
+  .mobile-responsive{
+    display:block!important;
+  }
+  .desktop-responsive{
+    display:none!important;
+  }
+  .thankyou_text{
+    padding:0 30px;
+    margin-top: 80px!important;
+  }
+  .foot_image{
+    margin-right: -15px;
+    margin-bottom: -5px;
+  }
+  .buttonmargin{
+    margin-top: 30px;
+    padding:0 60px!important;
+  }
+  .photomargin{
+    margin-top: 0px;
+  }
+  .product-love {
+    right:6px!important;
+  }
+  .product-like{
+    left:0px!important;
+  }
+  .signinform{
+    width: 90%!important;
+  }
+  .detail-product1{
+    max-height: 35vh;
+  }
+  .detail-arrow{
+    padding:0px!important;
+    margin-bottom: 20px!important;
+    margin-top: 20px!important;
+  }
+  .fEGiFI{
+    margin-bottom: 50px!important;
+    margin-top:30px!important;
+  }
+  .product-opac{
+    padding: 0px !important;
+    padding-top: 80vw!important;
+  }
+  .product-opac > p:first-child {
+    font-size: 20px!important;
+    margin-bottom: 8px;
+    width: 100%;
+    padding: 0 10px!important;
+  }
+  .product-opac > p:nth-child(2) {
+    font-size: 20px!important;
+    margin-left: calc(50% - 32px)!important;
+  }
+  .prologo{
+    width: 60%;
+  }
+  .prouser{
+    width:30%;
+  }
+  .userMark{
+    padding-right:15px!important;
+  }
+  .userName{
+    font-size:14px!important;
+  }
+  .logo {
+    width: 60%;
+  }
+  .profile_logo img{
+    width: 30%;
+  }
+  .header_title .createAccoSub{
+    width: 251px;
+  }
+
+  .register_title p {
+    font-size: 40px;
+  }
+  .header_title p {
+    font-size: 40px;
+  }
+
+  .foot_image {
+    width: 20%;
+  }
+
+  .web-based-item {
+    display: none !important;
+  }
+
+  .mobile-based-item {
+    display: block !important;
+  }
+}
+
+.filters{
+  width: 96px;
+  height: 28px;
+  color: #000000;
+  font-family: "Montserrat Medium";
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.filters-spec{
+  width: 96px;
+  height: 28px;
+  color: #000000;
+  font-family: "Montserrat Medium";
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.filters-inactivate{
+  height: 20px;
+  color: #7f7f7f;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.44px;
+  margin-bottom: 12px;
+}
+
+.filters-activate{
+  height: 20px;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.44px;
+  margin-bottom: 12px;
+}
+
+.filters-uncheck{
+  /* Style for "Rectangle" */
+  width: 22px;
+  height: 22px;
+  border: 1px solid #7f7f7f;
+}
+
+.filters-checked{
+  /* Style for "Rectangle" */
+  width: 22px;
+  height: 22px;
+  background-color: #e9dff8;
+}
+.Bigcontainer{
+  width: 90%;
+  margin:auto;
+  min-height: 42vh;
+  padding-top:20px;
+}
+.text-gift{
+  margin:auto;
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+.userName{
+  /* Style for "Lindsey Pr" */
+  width: 133px;
+  height: 21px;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.46px;
+  display: inline;
+  margin-right: 16px;
+}
+.userMark{
+  margin-top:auto;
+  margin-bottom:auto;
+  text-align: right;
+  padding-right: 60px;
+}
+.IAM{
+	margin:0 !important;
+}
+.Ifilters span{
+  margin:auto ; 
+  margin-left:0 ;
+}
+.Ifilters{
+  margin-left:0 !important;
+}
+
+.product-list {
+  margin-bottom: 59px;
+  position: relative;
+  cursor:pointer;
+
+}
+.btnLearn{
+	width: 231px;
+	height: 42px;
+	border: 1px solid #7f7f7f;
+	margin:auto;
+	padding:5px;
+	cursor:pointer;
+}
+.labLearn{
+	/* Style for "Load more" */
+	width: 69px;
+	height: 17px;
+	color: #000000;
+	font-family: Montserrat;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.33px;
+	margin-left:74px;
+}
+.viewProduct{
+	/* Style for "You’ve vie" */
+	width: 100%;
+	height: 20px;
+	color: #7f7f7f;
+	font-family: Montserrat;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.44px;
+}
+.product-opac{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 0px 20px;
+  text-align: center;
+  color: #fff;
+}
+.product-opac > p {
+  display: block;
+}
+.product-opac > p:first-child {
+  font-size: 1vw;
+  margin-bottom: 8px;
+  font-family: Montserrat;
+  font-weight: 400;
+  letter-spacing: 2.13px;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 55px;
+}
+.product-opac > p:nth-child(2) {
+  font-size: 1.3vw;
+  font-family: "Montserrat Semi Bold";
+  font-weight: 600;
+  letter-spacing: 2.27px;
+  position: absolute;
+  bottom: 15px;
+  margin-left: calc(50% - 53px);
+  
+}
+.product-like{
+  position: absolute;
+  left: 0px;
+  top: 48px;
+  cursor: pointer;
+}
+.product-love {
+  position: absolute;
+  right: 21px;
+  top: 20px;
+  cursor: pointer;
+}
+.product-info{
+  position:absolute;
+  
+}
+.fEGiFI{
+  margin:auto;
+  margin-top:250px;
+}
+.details{
+  position: absolute!important;
+  bottom: 0px;
+  right: 0px;
+}
+button.details:focus{
+  outline: none;
+}
+.detail-product1{
+  width:  auto;
+  height: 70vh;
+  margin:auto;
+}
+.col-md-7{
+  background-image: linear-gradient(27deg, #e7e4e5 0%, #fbfbfb 100%);
+}
+.detail-arrow{
+  cursor:pointer;
+  margin:auto
+}
+.classFlex{
+  display:flex;
+  flex-wrap: wrap;
+}
+.btn_friend{
+  float: right;
+}
+.product-container{
+  margin-left:auto;
+  margin-right: auto;
+}
+.product-brand{  
+  font-family: 'BentonSansBook,Helvetica,Arial,sans-serif';
+  font-feature-settings: "liga" 0;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 40px
+}
+.product-name{
+  font-family: BentonSansLight,Helvetica,Arial,sans-serif;
+  font-feature-settings: "liga" 0;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0;
+  text-transform: inherit;
+  font-weight: 400;
+}
+.product-price{
+  font-family: BentonSans,Helvetica,Arial,sans-serif;
+  font-feature-settings: "liga" 0;
+  font-size: 20px;
+  line-height: 18px;
+  letter-spacing: .04em;
+  text-transform: inherit;
+  font-weight: 800;
+  margin-top:40px;
+  margin-bottom: 20px;
+}
+.product-color{
+  font-family: 'BentonSansBook,Helvetica,Arial,sans-serif';
+  font-feature-settings: "liga" 0;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: .04em;
+  text-transform: inherit;
+  font-weight: 400;
+}
+.product-size{
+  margin-right:20px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 35px;
+  line-height: 33px;
+  margin: 0 5px 5px 0;
+  position: relative;
+  text-align: center;
+  min-width: 35px;
+  padding: 0 5px;
+  border: 1px solid #e1e1e1;
+}
+.product-size1{
+  margin-bottom:20px;
+}
+.product-size2{
+  color: #666;
+  font-family: 'BentonSansBook,Helvetica,Arial,sans-serif';
+  -webkit-font-feature-settings: "liga" 0;
+  font-feature-settings: "liga" 0;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: .04em;
+  text-transform: inherit;
+  font-weight: 400;
+}
+.product-description{
+  font-family: 'BentonSansLight,Helvetica,Arial,sans-serif';
+  font-feature-settings: "liga" 0;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: 0;
+  font-weight: 100;
+}
+.product-thumb{
+  height: 35px;
+}
+.product-thumb1{
+  border: 3px solid #e1e1e1;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-left:-2px;
+}
+.MuiGrid-item{
+  padding-right: 35px;
+}
+.pink-button{
+  height: 50px;
+  width: 6vw;
+  background: #e9dff8!important;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.3818184px;
+  text-transform: capitalize;
+  margin: 5px;
+  position: absolute!important;
+  right: 0px;
+  bottom: 0px;
+}
+.pinkButton{
+  height: 50px;
+  width: 160px;
+  background: #e9dff8!important;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.3818184px;
+  text-transform: capitalize;
+  margin-top: 40px!important;
+  display: flex!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+.probtn-container{
+  margin:auto;
+}
+.pinkButton1{
+  height: 50px;
+  background: #e9dff8!important;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.3818184px;
+  text-transform: capitalize;
+  margin-top: 40px!important;
+}
+.inputEmail input{
+  height:2em;
+}
+.dropdown-toggle::after{
+  color:#fff;
+}
+.dropdown-toggle{
+  cursor: pointer;
+}
+.guest-container .footer-bar{
+  margin-top:0px!important;
+}
+.Bigcontainer .col-md-7{
+  background-image: none;
+}
+.class-input{
+  display:flex!important;
+  margin-bottom:10px!important;
+}
+button {
+  outline: none!important;
+}
+.delete-dialog{
+  width: 400px;
+}
+.signinform{
+  width: 30%;
+  margin: auto;
+  margin-top: 150px;
+}
+.MuiFormControl-root{
+  margin-top: 8px!important;
+}
+.detail-img{
+  display:  block;
+  height: 84px;
+  width: 63px;
+  float: right;
+}
+.label-active, .label-inactive{
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+.label-active::before {
+  border: 3px solid #e1e1e1;
+  content: "";
+  background: transparent;
+  position: absolute;
+  z-index: 0;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+}
+.label-active::after {
+  border: 1px solid #000;
+  content: "";
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.label-inactive:hover::before {
+  border: 3px solid #e1e1e1;
+  content: "";
+  background: transparent;
+  position: absolute;
+  z-index: 0;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+}
+.label-inactive:hover::after {
+  border: 1px solid #000;
+  content: "";
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.thankyou_text{
+  text-align: center;
+  margin-top: 150px;
+  font-size: 20px;
+}
+.mobile-responsive{
+  display: none;
+}
+
+
+.product-opac{
+  display: none;
+}
+.product-list .details {
+  display: none;
+}
+
+.product-list:hover .product-opac,
+.product-list:focus .product-opac,
+.product-list:hover .details,
+.product-list:focus .details{
+  display: block;
+}
+
+
+.product-list .product-feed .show-hover{
+  display: none;
+}
+.product-list .product-feed .hide-hover{
+  display: block;
+}
+.product-list:hover .product-feed .show-hover{
+  display: block;
+}
+.product-list:hover .product-feed .hide-hover{
+  display: none;
+}
+.product-description ul{
+  margin-left:25px;
+}
+.buttonmargin{
+  padding-right: 45px;
+}
+.empty-subtitle{
+  padding-left: 29%;
+  padding-right: 29%;
+}
+.empty-detail h5{
+  text-align: left;
+}
+.empty-detail{
+  margin-top: 30px;
+}

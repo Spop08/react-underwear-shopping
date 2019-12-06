@@ -1,0 +1,56 @@
+{
+  "name": "unwravel",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.4.4",
+    "@material-ui/core": "^4.1.0",
+    "@material-ui/icons": "^4.1.0",
+    "@material-ui/styles": "^4.1.0",
+    "contentful": "^7.6.0",
+    "firebase": "^6.0.2",
+    "formsy-react": "^1.1.5",
+    "material-ui": "^0.20.2",
+    "mdi-material-ui": "^6.0.0",
+    "react": "^16.8.6",
+    "react-cookies": "^0.1.1",
+    "react-dom": "^16.8.6",
+    "react-masonry-component": "^6.2.1",
+    "react-notifications": "^1.4.3",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.1",
+    "react-select": "^3.0.4",
+    "react-spinners-kit": "^1.9.0",
+    "react-uid": "^2.2.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.2.0",
+    "superagent": "^5.0.5",
+    "typeface-roboto": "0.0.54",
+    "uikit": "^3.1.6",
+    "webfontloader": "^1.6.28"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
