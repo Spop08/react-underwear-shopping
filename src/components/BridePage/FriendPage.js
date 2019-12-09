@@ -42,16 +42,6 @@ class FriendPage extends Component {
         if (response.status === 200) {
 			NotificationManager.success('Successfully Added your Friend', '', 5000)
           this.setState({email: ''})
-          console.log("Friend Page Added");
-          console.log("Friend Page Added");
-          console.log("Friend Page Added");
-          console.log("Friend Page Added");
-          console.log("Friend Page Added");
-          console.log("Friend Page Added");
-          console.log("Friend Page Added");
-          console.log("Friend Page Added");
-          console.log("Friend Page Added");
-          console.log("Friend Page Added");
         }
       })
   }

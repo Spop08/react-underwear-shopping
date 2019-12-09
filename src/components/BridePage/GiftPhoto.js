@@ -56,6 +56,16 @@ class GiftPhoto extends React.Component{
           window.location.reload();
         })
     }
+    handleAgree_template() {
+        this.setState({open: false})
+        portfolioService.changeLOL({uniq_id:this.props.info.uniq_id, lol:0})
+        portfolioService
+        .removeGift({uniq_id: this.props.info.uniq_id})
+        .then((response) => {
+          console.log("REMOVE GIFT RESPONSE:", response);
+          window.location.reload();
+        })
+    }
     render(){
         const classes = this.props.classes;
         return(
