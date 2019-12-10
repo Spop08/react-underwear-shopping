@@ -16,6 +16,16 @@ const styles = theme => ({
     textAlign: 'center'
   }
 });
+const reg_styles = theme => ({
+  root: {
+    "& > * + *": {
+      marginTop: theme.spacing.unit * 2
+    }
+  },
+  or: {
+    textAlign: 'center'
+  }
+});
 
 class Register extends Component {
   static propTypes = {
