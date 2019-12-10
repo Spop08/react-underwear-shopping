@@ -114,11 +114,6 @@ class ProductPage extends Component {
 	var temp = this.state.portfolios;
 	temp[index].lol = lol;
   }
-  onChangeLOL_temp(index, lol) {
-	var temp = this.state.portfolios;
-	temp[index].lol = lol;
-  }
-
   render() {
     const {loved, bras, panties, lingerie, victoria, zaful} = this.state;
     const {loading} = this.state;

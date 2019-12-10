@@ -47,6 +47,10 @@ class Footer extends  Component {
                 <img className="ml-4" src="/assets/image/instagram-logo-button.png"></img>
                 <img className="ml-4" src="/assets/image/facebook-logo-button.png"></img>
             </div>
+            <div className="col-md-3 col-12 middle">
+                <img className="ml-4" src="/assets/image/instagram-logo-button.png"></img>
+                <img className="ml-4" src="/assets/image/facebook-logo-button.png"></img>
+            </div>
             
             
             
