@@ -41,6 +41,13 @@ class SigninForm extends Component {
             </p>
         </div>
     );
+    const header1 = (
+      <div className="register_title" style={{marginTop:"50px"}}>
+          <p style={{fontSize: '30px'}}>
+              Log In
+          </p>
+      </div>
+  );
 
     const footer = (
       <div className={classes.footer}>
