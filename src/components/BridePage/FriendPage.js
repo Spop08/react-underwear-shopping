@@ -18,7 +18,9 @@ class FriendPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: ''
+      email: '',
+      name: '',
+      id: '',
     }
     this.handleSubmit = this
       .handleSubmit
@@ -74,6 +76,7 @@ class FriendPage extends Component {
                 </Button>
               </form>
             </div>
+            
             <div className="col-md-4"></div>
           </div>
         </div>
