@@ -81,12 +81,6 @@ class BHeader extends React.Component {
             <button class="dropdown-item" type="button" onClick={this.settings}>Settings</button>
             <button class="dropdown-item" type="button" onClick={this.signOut}>Sign Out</button>
           </div>
-          <div class="dropdown-menu dropdown-menu-right">
-            <button class="dropdown-item" type="button" onClick={this.handleProfile}>Profile</button>
-            <button class="dropdown-item" type="button" onClick={this.handleFriends}>Friends</button>
-            <button class="dropdown-item" type="button" onClick={this.settings}>Settings</button>
-            <button class="dropdown-item" type="button" onClick={this.signOut}>Sign Out</button>
-          </div>
         </div>
       </div>
     )

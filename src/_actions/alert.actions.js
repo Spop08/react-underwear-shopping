@@ -12,6 +12,9 @@ function error(message) {
 function clear() {
   return { type: alertConstants.CLEAR };
 }
+function warning() {
+  return { type: alertConstants.CLEAR };
+}
 
 
 const alertActions = {
