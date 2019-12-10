@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import {accountActions} from '../../_actions';
 import {portfolioService} from '../../_services';
-import {connect} from 'react-redux';
 import Checkbox from '@material-ui/core/Checkbox';
 import {FormControlLabel} from '@material-ui/core';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -9,7 +7,6 @@ import FeedPhoto from './FeedPhoto';
 import {FlapperSpinner} from "react-spinners-kit";
 import BHeader from '../BHeader'
 import {uid} from 'react-uid'
-import { MapsZoomOutMap } from 'material-ui/svg-icons';
 
 class ProductPage extends Component {
 
@@ -41,7 +38,6 @@ class ProductPage extends Component {
         this.setState({portfolios: response.data, loading: false})
         this.setProducts();
       })
-
   }
   handleChange = name => event => {
     this.setState({[name]: event.target.checked});
@@ -115,6 +111,10 @@ class ProductPage extends Component {
   }
 
   onChangeLOL(index, lol) {
+	var temp = this.state.portfolios;
+	temp[index].lol = lol;
+  }
+  onChangeLOL_temp(index, lol) {
 	var temp = this.state.portfolios;
 	temp[index].lol = lol;
   }

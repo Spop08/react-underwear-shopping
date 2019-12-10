@@ -18,9 +18,7 @@ class FriendPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      name: '',
-      id: '',
+      email: ''
     }
     this.handleSubmit = this
       .handleSubmit
