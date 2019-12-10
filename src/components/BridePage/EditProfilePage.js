@@ -70,7 +70,9 @@ class EditProfilePage extends Component {
       topsize: account.topsize
     });
   }
-
+  componentDidUpdate() {
+    
+  }
   firstnameChange(event) {
     this.setState({firstname: event.target.value});
   }
