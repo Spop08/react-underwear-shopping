@@ -102,67 +102,7 @@ class ProfilePage extends Component {
         })
       })
   }
-  handleChange = name => event => {
-    this.setState({[name]: event.target.checked});
-    if (name === "loved") {
-      this.state.loved = event.target.checked;
-    }
-    if (name === "bras") {
-      this.state.bras = event.target.checked;
-    }
-    if (name === "panties") {
-      this.state.panties = event.target.checked;
-    }
-    if (name === "lingerie") {
-      this.state.lingerie = event.target.checked;
-    }
-    if (name === "victoria") {
-      this.state.victoria = event.target.checked;
-    }
-    if (name === "zaful") {
-      this.state.zaful = event.target.checked;
-    }
-    this.setProducts();
-    console.log(this.state);
-  }
-  setProducts() {
-    const selectedPT1 = [];
-    const selectedPT2 = [];
-    const selectedPT3 = [];
-    const selectedPT4 = [];
-    var tCnt = 0;
-    this
-      .state
-      .portfolios
-      .map(i => {
-        if (
-            ((i.brand_name === 'Zaful' && this.state.zaful) ||
-             (i.brand_name !== 'Zaful' && this.state.victoria) ||
-             (!this.state.zaful && !this.state.victoria)) &&
-            ((i.lol === 2 && this.state.loved === true) ||
-            (i.product_category === "Bras" && this.state.bras === true) ||
-            (i.product_category === "Panties" && this.state.panties === true) ||
-            (i.product_category === "Lingerie" && this.state.lingerie === true) ||
-            (this.state.loved === false && this.state.bras === false && this.state.panties === false && this.state.lingerie === false))) {
-          switch (tCnt % 4) {
-            case 0:
-              selectedPT1.push(i);
-              break;
-            case 1:
-              selectedPT2.push(i);
-              break;
-            case 2:
-              selectedPT3.push(i);
-              break;
-            case 3:
-              selectedPT4.push(i);
-              break;
-          }
-          tCnt++;
-        }
-      })
-    this.setState({tCnt: tCnt, selectedPT1: selectedPT1, selectedPT2: selectedPT2, selectedPT3: selectedPT3, selectedPT4: selectedPT4})
-  }
+  
   render() {
     const {account} = this.props;
     const {gifts} = this.state;
