@@ -44,6 +44,9 @@ class GiftPhoto extends React.Component{
     removeGift() {
         this.setState({open: true})        
     }
+    handleClose() {
+        this.setState({open: false})
+    }
     
     render(){
         const classes = this.props.classes;
