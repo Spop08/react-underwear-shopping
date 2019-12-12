@@ -121,7 +121,84 @@ class ProductPage extends Component {
       <div className="Bigcontainer">
 
         <BHeader/>
-        
+        <div className="row my-5">
+
+			<div className="col-md-3 col-12 order-md-12 class-filter">
+				<p className="filters">TYPES</p>
+				<FormGroup>
+				<FormControlLabel
+					className="Ifilters"
+					control={< Checkbox className = "IAM" checked = {
+					loved
+				}
+				onChange = {
+					this.handleChange('loved')
+				}
+				style = {{color:'rgb(149, 126, 184)'}}/>}
+					label="Loved"
+					labelPlacement="start"></FormControlLabel>
+				<FormControlLabel
+					className="Ifilters"
+					control={< Checkbox className = "IAM" checked = {
+					bras
+				}
+				onChange = {
+					this.handleChange('bras')
+				}
+				style = {{color:'rgb(149, 126, 184)'}}/>}
+					label="Bras"
+					labelPlacement="start"></FormControlLabel>
+				<FormControlLabel
+					className="Ifilters"
+					control={< Checkbox className = "IAM" checked = {
+					panties
+				}
+				onChange = {
+					this.handleChange('panties')
+				}
+				style = {{color:'rgb(149, 126, 184)'}}/>}
+					label="Panties"
+					labelPlacement="start"></FormControlLabel>
+				<FormControlLabel
+					className="Ifilters"
+					control={< Checkbox className = "IAM" checked = {
+					lingerie
+				}
+				onChange = {
+					this.handleChange('lingerie')
+				}
+				style = {{color:'rgb(149, 126, 184)'}}/>}
+					label="Lingerie"
+					labelPlacement="start"></FormControlLabel>
+				</FormGroup>
+
+					<p className="filters-spec">BRANDS</p>
+					<FormGroup>
+					<FormControlLabel
+						className="Ifilters"
+						control={< Checkbox className = "IAM" checked = {
+						victoria
+					}
+					onChange = {
+						this.handleChange('victoria')
+					}
+					style = {{color:'rgb(149, 126, 184)'}}/>}
+						label="Victoria Secret"
+						labelPlacement="start"></FormControlLabel>
+					<FormControlLabel
+						className="Ifilters"
+						control={< Checkbox className = "IAM" checked = {
+						zaful
+					}
+					onChange = {
+						this.handleChange('zaful')
+					}
+					style = {{color:'rgb(149, 126, 184)'}}/>}
+						label="Zaful"
+						labelPlacement="start"></FormControlLabel>
+					</FormGroup>
+              	</div>
+			</div>
       </div>
     );
   }
