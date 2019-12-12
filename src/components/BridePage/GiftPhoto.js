@@ -41,6 +41,10 @@ class GiftPhoto extends React.Component{
         });
     }
     
+    removeGift() {
+        this.setState({open: true})        
+    }
+    
     render(){
         const classes = this.props.classes;
         return(
