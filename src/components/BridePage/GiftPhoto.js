@@ -34,7 +34,12 @@ class GiftPhoto extends React.Component{
         this.handleAgree = this.handleAgree.bind(this)
         this.handleClose = this.handleClose.bind(this)
     }
-    
+    onDetail() {
+        this.props.history.push({
+            pathname:'/bride/detail_page',
+            state: {lolstate:this.props.info.lol, info:this.props.info, is_gift:1}
+        });
+    }
     
     render(){
         const classes = this.props.classes;
