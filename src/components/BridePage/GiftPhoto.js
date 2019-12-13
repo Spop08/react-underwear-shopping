@@ -34,28 +34,7 @@ class GiftPhoto extends React.Component{
         this.handleAgree = this.handleAgree.bind(this)
         this.handleClose = this.handleClose.bind(this)
     }
-    onDetail() {
-        this.props.history.push({
-            pathname:'/bride/detail_page',
-            state: {lolstate:this.props.info.lol, info:this.props.info, is_gift:1}
-        });
-    }
-    removeGift() {
-        this.setState({open: true})        
-    }
-    handleClose() {
-        this.setState({open: false})
-    }
-    handleAgree() {
-        this.setState({open: false})
-        portfolioService.changeLOL({uniq_id:this.props.info.uniq_id, lol:0})
-        portfolioService
-        .removeGift({uniq_id: this.props.info.uniq_id})
-        .then((response) => {
-          console.log("REMOVE GIFT RESPONSE:", response);
-          window.location.reload();
-        })
-    }
+    
     
     render(){
         const classes = this.props.classes;
