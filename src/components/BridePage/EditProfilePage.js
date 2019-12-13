@@ -280,3 +280,11 @@ class EditProfilePage extends Component {
 
   }
 }
+
+function mapStateToProps(state) {
+
+  return {account: state.account.account};
+}
+
+export default withRouter(connect(mapStateToProps)(withStyles(useStyles)(EditProfilePage)));
+// export default withRouter(connect(mapStateToProps)(EditProfilePage));
