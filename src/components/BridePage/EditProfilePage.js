@@ -25,3 +25,36 @@ const useStyles = (theme) => ({
 	marginBottom:'10px'
   },
 });
+
+class EditProfilePage extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {}
+    this.handleSubmit = this
+      .handleSubmit
+      .bind(this);
+    this.cancelEdit = this
+      .cancelEdit
+      .bind(this);
+
+    this.firstnameChange = this
+      .firstnameChange
+      .bind(this);
+    this.lastnameChange = this
+      .lastnameChange
+      .bind(this);
+    this.brasizeChange = this
+      .brasizeChange
+      .bind(this);
+    this.bottomsizeChange = this
+      .bottomsizeChange
+      .bind(this);
+    this.pantysizeChange = this
+      .pantysizeChange
+      .bind(this);
+    this.topsizeChange = this
+      .topsizeChange
+      .bind(this);
+  }
+}
