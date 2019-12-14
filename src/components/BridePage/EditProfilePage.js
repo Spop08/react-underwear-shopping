@@ -124,4 +124,29 @@ class EditProfilePage extends Component {
 			.history
 			.go(-1);
 	}
+	render() {
+		const {
+		  firstname,
+		  lastname,
+		  brasize,
+		  pantysize,
+		  bottomsize,
+		  topsize
+		} = this.state;
+		const {classes} = this.props;
+		return (
+		  <div>
+			<div className="Bigcontainer">
+			  <BHeader></BHeader>
+			  <div className="row" style={{
+				marginTop: '50px'
+			  }}>
+				<div className="col-md-4"></div>
+				<div className="col-md-4">
+				  <h2
+					style={{
+					marginBottom: '60px',
+					display: 'flex',
+					justifyContent: 'center'
+				  }}>Profile</h2>
 }
