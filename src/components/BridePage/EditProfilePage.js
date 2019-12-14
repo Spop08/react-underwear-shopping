@@ -180,4 +180,36 @@ class EditProfilePage extends Component {
                     inputProps={{
                     id: 'bra-size'
                   }}></Select>
+				  <MenuItem value={'XS'}>XS</MenuItem>
+                    <MenuItem value={'S'}>S</MenuItem>
+                    <MenuItem value={'M'}>M</MenuItem>
+                    <MenuItem value={'L'}>L</MenuItem>
+                    <MenuItem value={'XL'}>XL</MenuItem>
+                    <MenuItem value={'32A'}>32A</MenuItem>
+                    <MenuItem value={'32B'}>32B</MenuItem>
+                    <MenuItem value={'32C'}>32C</MenuItem>
+                    <MenuItem value={'32D'}>32D</MenuItem>
+                    <MenuItem value={'32DD'}>32DD</MenuItem>
+                    <MenuItem value={'32DDD'}>32DDD</MenuItem>
+                    <MenuItem value={'34A'}>34A</MenuItem>
+                    <MenuItem value={'34B'}>34B</MenuItem>
+                    <MenuItem value={'34C'}>34C</MenuItem>
+                    <MenuItem value={'34D'}>34D</MenuItem>
+                    <MenuItem value={'34DD'}>34DD</MenuItem>
+                    <MenuItem value={'34DDD'}>34DDD</MenuItem>
+                    <MenuItem value={'36A'}>36A</MenuItem>
+                    <MenuItem value={'36B'}>36B</MenuItem>
+                    <MenuItem value={'36C'}>36C</MenuItem>
+                    <MenuItem value={'36D'}>36D</MenuItem>
+                    <MenuItem value={'36DD'}>36DD</MenuItem>
+                    <MenuItem value={'36DDD'}>36DDD</MenuItem>
+                    <MenuItem value={'38A'}>38A</MenuItem>
+                    <MenuItem value={'38B'}>38B</MenuItem>
+                    <MenuItem value={'38C'}>38C</MenuItem>
+                    <MenuItem value={'38D'}>38D</MenuItem>
+                    <MenuItem value={'38DD'}>38DD</MenuItem>
+                    <MenuItem value={'38DDD'}>38DDD</MenuItem>
+
+                  </Select>
+                </FormControl>
 }
