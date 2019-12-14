@@ -57,4 +57,16 @@ class EditProfilePage extends Component {
       .topsizeChange
       .bind(this);
   }
+  componentDidMount() {
+    console.log(this.props.account);
+    const account = this.props.location.state.account;
+    this.setState({
+      firstname: account.firstname,
+      lastname: account.lastname,
+      brasize: account.brasize,
+      pantysize: account.pantysize,
+      bottomsize: account.bottomsize,
+      topsize: account.topsize
+    });
+  }
 }
