@@ -212,4 +212,35 @@ class EditProfilePage extends Component {
 
                   </Select>
                 </FormControl>
+				<FormControl className={classes.formControl} required fullWidth>
+                  <InputLabel htmlFor="panty-size">Panty Size</InputLabel>
+                  <Select
+                    onChange={this.pantysizeChange}
+                    value={pantysize}
+                    inputProps={{
+                    id: 'panty-size'
+                  }}>
+                    <MenuItem value={'XS'}>XS</MenuItem>
+                    <MenuItem value={'S'}>S</MenuItem>
+                    <MenuItem value={'M'}>M</MenuItem>
+                    <MenuItem value={'L'}>L</MenuItem>
+                    <MenuItem value={'XL'}>XL</MenuItem>
+                  </Select>
+                </FormControl>
+
+				<FormControl className={classes.formControl} required fullWidth>
+                  <InputLabel htmlFor="bottom-size">Bottom Size</InputLabel>
+                  <Select
+                    onChange={this.bottomsizeChange}
+                    value={bottomsize}
+                    inputProps={{
+                    id: 'bottom-size'
+                  }}>
+                    <MenuItem value={'XS'}>XS</MenuItem>
+                    <MenuItem value={'S'}>S</MenuItem>
+                    <MenuItem value={'M'}>M</MenuItem>
+                    <MenuItem value={'L'}>L</MenuItem>
+                    <MenuItem value={'XL'}>XL</MenuItem>
+                  </Select>
+                </FormControl>
 }
