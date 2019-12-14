@@ -92,4 +92,31 @@ class EditProfilePage extends Component {
   topsizeChange(event) {
     this.setState({topsize: event.target.value});
   }
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log(this.state);
+    const {
+      firstname,
+      lastname,
+      brasize,
+      bottomsize,
+      topsize,
+      pantysize
+    } = this.state;
+    console.log(this.state);
+    portfolioService
+      .editProfile({
+      firstname: firstname,
+      lastname: lastname,
+      brasize: brasize,
+      pantysize: pantysize,
+      bottomsize: bottomsize,
+      topsize: topsize
+    })
+      .then((response) => {
+        if(response.status === 200)
+          this.props.history.push('/portfolio')
+      })
+
+  }
 }
