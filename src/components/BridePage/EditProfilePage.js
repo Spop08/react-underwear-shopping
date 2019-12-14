@@ -149,4 +149,35 @@ class EditProfilePage extends Component {
 					display: 'flex',
 					justifyContent: 'center'
 				  }}>Profile</h2>
+			<form onSubmit={e => this.handleSubmit(e)}>
+                <FormControl className='class-input'>
+                  <InputLabel htmlFor="firstname">First Name*</InputLabel>
+                  <Input
+                    required
+                    className="inputEmail"
+                    id="firstname"
+                    value={firstname}
+                    defaultValue='Hello'
+                    onChange={this.firstnameChange}/>
+                </FormControl>
+
+                <FormControl className='class-input'>
+                  <InputLabel htmlFor="lastname">Last Name*</InputLabel>
+                  <Input
+                    required
+                    className="inputEmail"
+                    id="lastname"
+                    value={lastname}
+                    defaultValue='Hello'
+                    onChange={this.lastnameChange}/>
+                </FormControl>
+
+                <FormControl className={classes.formControl} required fullWidth>
+                  <InputLabel htmlFor="bra-size">Bra Size</InputLabel>
+                  <Select
+                    onChange={this.brasizeChange}
+                    value={brasize}
+                    inputProps={{
+                    id: 'bra-size'
+                  }}></Select>
 }
