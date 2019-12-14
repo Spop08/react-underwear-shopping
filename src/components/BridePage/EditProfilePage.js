@@ -243,4 +243,19 @@ class EditProfilePage extends Component {
                     <MenuItem value={'XL'}>XL</MenuItem>
                   </Select>
                 </FormControl>
+				<FormControl className={classes.formControl} required fullWidth>
+                  <InputLabel htmlFor="top-size">Top Size</InputLabel>
+                  <Select
+                    onChange={this.topsizeChange}
+                    value={topsize}
+                    inputProps={{
+                    id: 'top-size'
+                  }}>
+                    <MenuItem value={'XS'}>XS</MenuItem>
+                    <MenuItem value={'S'}>S</MenuItem>
+                    <MenuItem value={'M'}>M</MenuItem>
+                    <MenuItem value={'L'}>L</MenuItem>
+                    <MenuItem value={'XL'}>XL</MenuItem>
+                  </Select>
+                </FormControl>
 }
