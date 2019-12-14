@@ -179,7 +179,7 @@ class EditProfilePage extends Component {
                     value={brasize}
                     inputProps={{
                     id: 'bra-size'
-                  }}></Select>
+                  }}>
 				  <MenuItem value={'XS'}>XS</MenuItem>
                     <MenuItem value={'S'}>S</MenuItem>
                     <MenuItem value={'M'}>M</MenuItem>
@@ -271,5 +271,16 @@ class EditProfilePage extends Component {
           </div>
         </div>
         <Footer></Footer>
-      </div>
-}
+	  </div>
+	  )
+
+	}
+  }
+  
+  function mapStateToProps(state) {
+  
+	return {account: state.account.account};
+  }
+  
+  export default withRouter(connect(mapStateToProps)(withStyles(useStyles)(EditProfilePage)));
+  // export default withRouter(connect(mapStateToProps)(EditProfilePage));
