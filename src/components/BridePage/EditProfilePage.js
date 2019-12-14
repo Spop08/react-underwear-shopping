@@ -69,4 +69,27 @@ class EditProfilePage extends Component {
       topsize: account.topsize
     });
   }
+  firstnameChange(event) {
+    this.setState({firstname: event.target.value});
+  }
+
+  lastnameChange(event) {
+    this.setState({lastname: event.target.value});
+  }
+
+  brasizeChange(event) {
+    this.setState({brasize: event.target.value});
+  }
+
+  pantysizeChange(event) {
+    this.setState({pantysize: event.target.value});
+  }
+
+  bottomsizeChange(event) {
+    this.setState({bottomsize: event.target.value});
+  }
+
+  topsizeChange(event) {
+    this.setState({topsize: event.target.value});
+  }
 }
