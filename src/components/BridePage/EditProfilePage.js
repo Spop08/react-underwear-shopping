@@ -258,4 +258,18 @@ class EditProfilePage extends Component {
                     <MenuItem value={'XL'}>XL</MenuItem>
                   </Select>
                 </FormControl>
+				<div className="classFlex">
+                  <Button className='col-md-5 pinkButton1' type="submit">Save
+                  </Button>
+                  <div className='col-md-2'></div>
+                  <Button className='col-md-5 pinkButton1' onClick={this.cancelEdit}>Cancel
+                  </Button>
+                </div>
+              </form>
+            </div>
+            <div className="col-md-4"></div>
+          </div>
+        </div>
+        <Footer></Footer>
+      </div>
 }
