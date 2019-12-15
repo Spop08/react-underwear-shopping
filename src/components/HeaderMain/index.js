@@ -25,6 +25,8 @@ class HeaderMain extends  Component {
   render() {
     return (
         <div className="header_main">
+            <Header />
+            <HeaderHome />
             
         </div>
       );
