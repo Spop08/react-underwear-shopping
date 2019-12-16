@@ -368,5 +368,19 @@ class ProfilePage extends Component {
                     .selectedPT4
                     .map((i, index) => <GiftPhoto info={i} key={index}/>)}
                 </div>
-              </div>))}
-}
+              </div>))}</div>
+            
+
+            </div>
+          </div>
+          <Footer></Footer>
+        </div>
+      );
+    }
+  }
+  
+  function mapStateToProps(state) {
+    const {account} = state;
+    console.log("account:  ", account);
+    return {account: account.account};
+  }
