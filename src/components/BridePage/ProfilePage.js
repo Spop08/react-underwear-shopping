@@ -288,4 +288,32 @@ class ProfilePage extends Component {
                     label="Lingerie"
                     labelPlacement="start"></FormControlLabel>
                 </FormGroup>
+                <p className="filters-spec">BRANDS</p>
+                <FormGroup>
+                  <FormControlLabel
+                    className="Ifilters"
+                    control={< Checkbox className = "IAM" checked = {
+                    victoria
+                  }
+                  onChange = {
+                    this.handleChange('victoria')
+                  }
+                  style = {{color:'rgb(149, 126, 184)'}}/>}
+                    label="Victoria Secret"
+                    labelPlacement="start"></FormControlLabel>
+                  <FormControlLabel
+                    className="Ifilters"
+                    control={< Checkbox className = "IAM" checked = {
+                    zaful
+                  }
+                  onChange = {
+                    this.handleChange('zaful')
+                  }
+                  style = {{color:'rgb(149, 126, 184)'}}/>}
+                    label="Zaful"
+                    labelPlacement="start"></FormControlLabel>
+                </FormGroup>
+              </div>
+
+            </div>
 }
