@@ -195,4 +195,47 @@ class ProfilePage extends Component {
 					</div>
 				</div>
 			</div>
+      <div className="sidebar_button col-md-3">
+				<div className="buttonmargin">
+				<Link
+					to="/bride/add_friend"
+					style={{
+					textDecoration: 'inherit'
+				}}>
+					<Button
+					className='btn_friend'
+					classes={{
+					label: "add_friend"
+					}}
+					style={{
+					marginTop: '0px'
+					}}
+					type="submit">Add Friends
+					<img
+						style={{
+						marginLeft: "20px"
+					}}
+						src="/assets/image/addfriend.png"></img>
+					</Button>
+				</Link>
+				<Link
+					to="/bride/product_page"
+					style={{
+					textDecoration: 'inherit'
+				}}>
+					<Button
+					className='btn_friend'
+					classes={{
+					label: "add_friend"
+					}}
+					type="submit">Add Gifts
+					<img
+						style={{
+						marginLeft: "20px"
+					}}
+						src="/assets/image/lingerie.png"></img>
+					</Button>
+				</Link>
+				</div>
+			</div>
 }
