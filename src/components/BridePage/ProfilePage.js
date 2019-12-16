@@ -316,4 +316,57 @@ class ProfilePage extends Component {
               </div>
 
             </div>
+            <div className="col-md-9 col-12 order-md-1">
+              
+              {gifts && (gifts.length === 0 ? 
+              (<div className="mainProduct my-5">
+                <h2>Your registry is empty!</h2>
+                <h2>Remember!</h2>
+                <div className="empty-subtitle">
+                  <div className="row empty-detail">
+                    <div className="col-md-3">
+                    <img src="/assets/image/Love.png"></img>
+                    </div>
+                    <h5 className="col-md-9">Click the heart<br></br>for no surprises, only<br></br>get what you want! </h5>
+                  </div>
+                  <div className="row empty-detail">
+                    <div className="col-md-3">
+                    <img src="/assets/image/Like.png"></img>
+                    </div>
+                    <h5 className="col-md-9">Click the Like Banner to create a<br></br>list of similar items - keeping the surprise but<br></br>still to your style!</h5>
+                  </div>
+                </div>
+              </div>)
+              :(<div className="row">
+                <div className="col-md-12 classFlex">
+                  <h2 className="text-gift">ITEMS YOU LOVED</h2>
+                </div>
+
+                <div className="col-md-3 col-sm-6 col-12">
+                  {this
+                    .state
+                    .selectedPT1
+                    .map((i, index) => <GiftPhoto info={i} key={index}/>)}
+                </div>
+                <div
+                  className="col-md-3 col-sm-6 col-12 photomargin">
+                  {this
+                    .state
+                    .selectedPT2
+                    .map((i, index) => <GiftPhoto info={i} key={index}/>)}
+                </div>
+                <div className="col-md-3 col-sm-6 col-12">
+                  {this
+                    .state
+                    .selectedPT3
+                    .map((i, index) => <GiftPhoto info={i} key={index}/>)}
+                </div>
+                <div
+                  className="col-md-3 col-sm-6 col-12 photomargin">
+                  {this
+                    .state
+                    .selectedPT4
+                    .map((i, index) => <GiftPhoto info={i} key={index}/>)}
+                </div>
+              </div>))}
 }
