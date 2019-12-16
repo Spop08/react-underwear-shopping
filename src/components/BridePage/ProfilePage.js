@@ -162,4 +162,37 @@ class ProfilePage extends Component {
       })
     this.setState({tCnt: tCnt, selectedPT1: selectedPT1, selectedPT2: selectedPT2, selectedPT3: selectedPT3, selectedPT4: selectedPT4})
   }
+  render() {
+    const {account} = this.props;
+    const {gifts} = this.state;
+    const {loved, bras, panties, lingerie, victoria, zaful} = this.state;
+    return (
+      <div>
+        <div className="Bigcontainer">
+          <BHeader></BHeader>
+          <div className="row my-5">
+			<div className="col-md-9">
+				<div className="size_bar row">
+					<div className="col-md-3 col-6 profile_logo size_bar_item">
+					<p>Top Size:</p>
+					{account !== undefined && <p className="size">{account.topsize}
+					</p>}
+					</div>
+					<div className="col-md-3 col-6 profile_logo size_bar_item">
+					<p>Bottom Size:</p>
+					{account !== undefined && <p className="size">{account.bottomsize}
+					</p>}
+					</div>
+					<div className="col-md-3 col-6 profile_logo size_bar_item">
+					<p>Panty Size:</p>
+					{account !== undefined && <p className="size">{account.pantysize}
+					</p>}
+					</div>
+					<div className="col-md-3 col-6 profile_logo size_bar_item">
+					<p>Bra Size:</p>
+					{account !== undefined && <p className="size">{account.brasize}
+					</p>}
+					</div>
+				</div>
+			</div>
 }
