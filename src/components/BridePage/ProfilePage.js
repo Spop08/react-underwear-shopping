@@ -238,4 +238,54 @@ class ProfilePage extends Component {
 				</Link>
 				</div>
 			</div>
+      <div className="col-md-3 col-12 order-md-12">
+				
+              <div className="class-filter">
+                <p className="filters-spec">TYPES</p>
+                <FormGroup>
+                  <FormControlLabel
+                    className="Ifilters"
+                    control={< Checkbox className = "IAM" checked = {
+                    loved
+                  }
+                  onChange = {
+                    this.handleChange('loved')
+                  }
+                  style = {{color:'rgb(149, 126, 184)'}}/>}
+                    label="Loved"
+                    labelPlacement="start"></FormControlLabel>
+                  <FormControlLabel
+                    className="Ifilters"
+                    control={< Checkbox className = "IAM" checked = {
+                    bras
+                  }
+                  onChange = {
+                    this.handleChange('bras')
+                  }
+                  style = {{color:'rgb(149, 126, 184)'}}/>}
+                    label="Bras"
+                    labelPlacement="start"></FormControlLabel>
+                  <FormControlLabel
+                    className="Ifilters"
+                    control={< Checkbox className = "IAM" checked = {
+                    panties
+                  }
+                  onChange = {
+                    this.handleChange('panties')
+                  }
+                  style = {{color:'rgb(149, 126, 184)'}}/>}
+                    label="Panties"
+                    labelPlacement="start"></FormControlLabel>
+                  <FormControlLabel
+                    className="Ifilters"
+                    control={< Checkbox className = "IAM" checked = {
+                    lingerie
+                  }
+                  onChange = {
+                    this.handleChange('lingerie')
+                  }
+                  style = {{color:'rgb(149, 126, 184)'}}/>}
+                    label="Lingerie"
+                    labelPlacement="start"></FormControlLabel>
+                </FormGroup>
 }
