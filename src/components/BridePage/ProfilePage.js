@@ -384,3 +384,4 @@ class ProfilePage extends Component {
     console.log("account:  ", account);
     return {account: account.account};
   }
+  export default withRouter(connect(mapStateToProps)(withStyles(Styles)(ProfilePage)));
