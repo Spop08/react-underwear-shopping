@@ -26,3 +26,23 @@ const styles = theme => ({
     padding: theme.spacing.unit
   }
 });
+
+class RegisterForm extends Component {
+  state = {
+    disableLocal: false,
+    disableRegister: true,
+    disableRegisterProviders: true
+  };
+
+  render() {
+    const {classes} = this.props;
+
+    const header = (
+        <div>
+        <div className="row">
+            <div className="col-md-4 col-5" href={"/home"}>
+
+                <a href="/home"><img className="logo" src="/assets/image/logo.png" ></img></a>
+            </div>
+            
+        </div>
