@@ -20,3 +20,18 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 2
   }
 });
+
+
+class LocalUserLogin extends Component {
+  static propTypes = {
+    onLogin: PropTypes.func,
+    loginFailed: PropTypes.string
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      canSubmit: false
+    }
+  }
