@@ -87,3 +87,34 @@ class RegisterForm extends Component {
   handleLoginWithProvider = providerId => {
     alert(`Logging in with provider '${providerId}'`);
   };
+  handleRegister = content => {
+    
+    alert(`Registering with content '${JSON.stringify(content)}'`);
+    console.log(content);
+    const payload = {
+      firstname : content['firstname'],
+      lastname : content['lastname'],
+      email: content['email'],
+      brasize: content['brasize'],
+      pantysize: content['pantysize'],
+      topsize: content['topsize'],
+      bottomsize: content['bottomsize'],
+      password1 : content['password'],
+      password2 : content['repeated_password']
+    };
+    superagent
+      .post(APIPath + "/api/accounts/auth/register/")
+      .set("Content-Type", "application/json")
+      .send(payload)
+          .then(res => {
+              console.log("response is ", res)
+              // localStorage.setItem("token", res.body.token);
+              // localStorage.setItem("email" , res.body.email);
+              // this.props.onSuccessfulSignup();
+          })
+          .catch(err => {
+              console.log("Error response is", err.response);
+              // this.setState({error: err.response.body.error})
+              console.log("this.state is", this.state)
+          });
+  };
