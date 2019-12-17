@@ -60,3 +60,19 @@ class RegisterForm extends Component {
         <img className="foot_image float-right" src="/assets/image/Bitmap.png"></img>
       </div>
     );
+    return (
+      <div className={classes.root}>
+        <CssBaseline/>
+        <LoginRegister header={header} footer={footer}
+                       onLogin={this.handleLogin}
+                       onLoginWithProvider={this.handleLoginWithProvider}
+                       onRegister={this.handleRegister}
+                       onRegisterWithProvider={this.handleRegisterWithProvider}
+                       disableLocal={this.state.disableLocal}
+                       disableRegister={this.state.disableRegister}
+                       disableRegisterProviders={this.state.disableRegisterProviders}
+        />
+       
+      </div>
+    );
+  }
