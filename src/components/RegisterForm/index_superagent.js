@@ -122,3 +122,6 @@ class RegisterForm extends Component {
     alert(`Registering with provider '${providerId}'`);
   };
 }
+
+
+export default withStyles(styles)(RegisterForm);
