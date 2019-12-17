@@ -58,3 +58,15 @@ class LocalUserLogin extends Component {
                 className={classes.field}
                 label="Username"
             />
+            <ValidatedTextField
+                type="password"
+                name="password"
+                autoComplete="current-password"
+                validations="minLength:2"
+                validationErrors={{
+                  minLength: "Too short"
+                }}
+                required
+                className={classes.field}
+                label="Password"
+            />
