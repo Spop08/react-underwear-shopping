@@ -76,3 +76,14 @@ class RegisterForm extends Component {
       </div>
     );
   }
+  handleChange = name => event => {
+    this.setState({[name]: event.target.checked});
+  };
+
+  handleLogin = content => {
+    alert(`Logging in with content '${JSON.stringify(content)}'`);
+  };
+
+  handleLoginWithProvider = providerId => {
+    alert(`Logging in with provider '${providerId}'`);
+  };
