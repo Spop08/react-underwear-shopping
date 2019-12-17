@@ -35,3 +35,26 @@ class LocalUserLogin extends Component {
       canSubmit: false
     }
   }
+  render() {
+    const {
+      classes,
+      loginFailed
+    } = this.props;
+    const {canSubmit} = this.state;
+    return (
+        <div className={classes.root}>
+          <Formsy className={classes.form}
+                  onValid={this.enableSubmit} onInvalid={this.disableSubmit}
+                  onValidSubmit={this.submit}>
+
+            <ValidatedTextField
+                name="username"
+                autoComplete="username"
+                validations="minLength:3"
+                validationErrors={{
+                  minLength: "Too short"
+                }}
+                required
+                className={classes.field}
+                label="Username"
+            />
