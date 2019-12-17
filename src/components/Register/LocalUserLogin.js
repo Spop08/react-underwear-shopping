@@ -70,3 +70,18 @@ class LocalUserLogin extends Component {
                 className={classes.field}
                 label="Password"
             />
+            {
+              loginFailed && <LoginRegisterError message={loginFailed}/>
+            }
+
+            <div className={classes.actions}>
+              <Button type="submit"
+                      fullWidth
+                      variant="contained" color="primary"
+                      disabled={!canSubmit}>Log in</Button>
+            </div>
+
+          </Formsy>
+        </div>
+    );
+  }
