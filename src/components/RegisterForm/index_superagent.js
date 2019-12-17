@@ -46,3 +46,17 @@ class RegisterForm extends Component {
             </div>
             
         </div>
+        <div className="register_title">
+            <p>
+                Create Your Account
+            </p>
+        </div>
+        </div>
+        
+    );
+
+    const footer = (
+      <div className={classes.footer}>
+        <img className="foot_image float-right" src="/assets/image/Bitmap.png"></img>
+      </div>
+    );
