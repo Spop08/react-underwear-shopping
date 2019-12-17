@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import DialogContent from '@material-ui/core/DialogContent';
-
-import RegisterForm from "../RegisterForm"
-import LoginForm from "../LoginForm"
-import SigninForm from "../SigninForm"
-import Grid from '@material-ui/core/Grid';
 
 import { accountActions } from '../../_actions';
 import { connect } from 'react-redux';
