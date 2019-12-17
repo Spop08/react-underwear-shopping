@@ -85,3 +85,17 @@ class LocalUserLogin extends Component {
         </div>
     );
   }
+  
+  disableSubmit = () => {
+    this.setState({canSubmit: false})
+  };
+
+  enableSubmit = () => {
+    this.setState({canSubmit: true})
+  };
+
+  submit = model => {
+    if (this.props.onLogin) {
+      this.props.onLogin(model);
+    }
+  }
