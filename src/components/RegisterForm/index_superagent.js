@@ -118,3 +118,7 @@ class RegisterForm extends Component {
               console.log("this.state is", this.state)
           });
   };
+  handleRegisterWithProvider = providerId => {
+    alert(`Registering with provider '${providerId}'`);
+  };
+}
