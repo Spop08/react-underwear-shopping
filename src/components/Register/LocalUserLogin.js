@@ -6,3 +6,17 @@ import PropTypes from 'prop-types';
 
 import ValidatedTextField from './components/ValidatedTextField';
 import LoginRegisterError from "./components/LoginRegisterError";
+
+const styles = theme => ({
+  root: {},
+  form: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  field: {
+    marginTop: theme.spacing.unit
+  },
+  actions: {
+    marginTop: theme.spacing.unit * 2
+  }
+});
