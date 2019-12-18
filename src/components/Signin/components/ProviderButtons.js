@@ -19,3 +19,14 @@ const providerColors = {
     primary: '#4285F4'
   }
 };
+
+
+/*
+Properties
+base color
+icon
+button label
+ */
+
+export class ProviderButton extends Component {
+  render() {
