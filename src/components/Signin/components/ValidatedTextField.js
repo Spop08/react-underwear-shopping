@@ -13,3 +13,22 @@ class ValidatedTextField extends Component {
     className: PropTypes.string,
     autoComplete: PropTypes.string
   };
+  render() {
+    const {
+      type, name, label, className, autoComplete
+    } = this.props;
+
+    const textFieldProps = {
+      type, name, label, className, autoComplete
+    };
+
+    return <TextField
+        {...textFieldProps}
+        value={this.props.getValue() || ''}
+        onChange={this.handleChange}
+        required={this.props.showRequired()}
+        error={this.props.showError()}
+        helperText={this.props.getErrorMessage()}
+        style={{display: "flex"}}
+    />
+  }
