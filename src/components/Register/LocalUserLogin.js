@@ -99,3 +99,7 @@ class LocalUserLogin extends Component {
       this.props.onLogin(model);
     }
   }
+  
+}
+
+export default withStyles(styles)(LocalUserLogin);
