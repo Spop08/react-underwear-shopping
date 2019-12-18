@@ -58,3 +58,9 @@ export class ProviderButton extends Component {
       </Button>
   );
 }
+handleClick = event => {
+  if (this.props.onClick) {
+    this.props.onClick(this.props.provider);
+  }
+}
+}
