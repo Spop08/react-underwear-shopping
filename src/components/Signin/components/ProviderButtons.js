@@ -98,3 +98,13 @@ function createProviderButton(provider, baseColor, icon, label) {
 
   return component;
 }
+
+
+export const FacebookButton =
+    createProviderButton("facebook", providerColors.facebook.primary, FacebookBox, "Facebook");
+export const GithubButton =
+    createProviderButton("github", providerColors.github.primary, GithubBox, "Github");
+export const TwitterButton =
+    createProviderButton("twitter", providerColors.twitter.primary, TwitterBox, "Twitter");
+export const GoogleButton =
+    createProviderButton("google", providerColors.google.primary, Google, "Google");
