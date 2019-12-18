@@ -64,3 +64,15 @@ handleClick = event => {
   }
 }
 }
+function createProviderButton(provider, baseColor, icon, label) {
+  const styles = theme => ({
+    leftIcon: {
+      marginRight: theme.spacing.unit
+    },
+    root: {
+      backgroundColor: baseColor,
+      '&:hover': {
+        backgroundColor: darken(baseColor, 0.2),
+      }
+    }
+  });
