@@ -85,3 +85,16 @@ function createProviderButton(provider, baseColor, icon, label) {
       register: PropTypes.bool,
       onClick: PropTypes.func
     };
+    render() {
+      return React.createElement(inner, {
+        providerIcon: icon,
+        providerLabel: label,
+        provider,
+        ...this.props
+      })
+    }
+
+  };
+
+  return component;
+}
