@@ -36,3 +36,5 @@ class ValidatedTextField extends Component {
     this.props.setValue(event.target.value)
   }
 }
+
+export default withFormsy(ValidatedTextField);
