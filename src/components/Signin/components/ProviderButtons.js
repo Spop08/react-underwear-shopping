@@ -30,3 +30,21 @@ button label
 
 export class ProviderButton extends Component {
   render() {
+    const {
+      classes,
+      providerIcon, providerLabel,
+      login, register,
+      provider, // for instance tracking in tests
+      ...restOfProps
+    } = this.props;
+
+    let label;
+    if (login) {
+      label = `Log in with ${providerLabel}`
+    }
+    else if (register) {
+      label = `Register with ${providerLabel}`
+    }
+    else {
+      label = providerLabel;
+    }
