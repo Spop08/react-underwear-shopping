@@ -76,3 +76,12 @@ function createProviderButton(provider, baseColor, icon, label) {
       }
     }
   });
+  const inner = withStyles(styles)(ProviderButton);
+
+  const component = class extends Component {
+    static propTypes = {
+      ...Button.propTypes,
+      login: PropTypes.bool,
+      register: PropTypes.bool,
+      onClick: PropTypes.func
+    };
