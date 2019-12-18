@@ -32,3 +32,7 @@ class ValidatedTextField extends Component {
         style={{display: "flex"}}
     />
   }
+  handleChange = event => {
+    this.props.setValue(event.target.value)
+  }
+}
