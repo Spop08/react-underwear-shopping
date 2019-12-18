@@ -48,3 +48,13 @@ export class ProviderButton extends Component {
     else {
       label = providerLabel;
     }
+    return (
+      <Button {...restOfProps} onClick={this.handleClick} classes={{
+        root: classes.root
+      }}
+      >
+        {React.createElement(providerIcon, {className: classes.leftIcon})}
+        {label}
+      </Button>
+  );
+}
