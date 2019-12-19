@@ -60,3 +60,27 @@ hidePassword(){
 showPassword(){
   this.setState({showPassword : true})
 }
+render() {
+  return (
+    <div>
+      <Header />
+      <H4 className="text-white">
+        Construct a Leasing Negotiation Table in less than 30 Seconds.
+      </H4>
+      <LogInCard>
+        <Form className="p-3" onSubmit={this.submitForm.bind(this)}>
+          <p style={{color:'black',textTransform:'CAPITALIZE',fontSize:'44px',textAlign:'center'}}>Sign up</p>
+          <div className="input-group mb-4">
+            <div className="input-group-prepend">
+              <span className="input-group-text" id="basic-addon1">
+                <i className="material-icons">account_circle</i>
+              </span>
+            </div>
+            <input
+              type="text"
+              name="username"
+              className="form-control"
+              value={this.state.username}
+              onChange={this.handleusernameChanged.bind(this)}
+              placeholder="Username"
+          />
