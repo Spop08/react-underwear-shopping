@@ -84,3 +84,19 @@ render() {
               onChange={this.handleusernameChanged.bind(this)}
               placeholder="Username"
           />
+          </div>
+            {this.state.error.username?<ul><li style={{textAlign:'center', color:'red', margin:'0px', padding:'0px', textAlign:'left'}}>{this.state.error.username[0]}</li></ul>:''} 
+
+            <div className="input-group mb-4">
+              <div className="input-group-prepend">
+                <span className="input-group-text" id="basic-addon1">
+                  <i className="material-icons">email</i>
+                </span>
+              </div>
+              <input
+                type="email"
+                className="form-control"
+                value={this.state.email}
+                onChange={this.handleemailChanged.bind(this)}
+                placeholder="Email"
+            />
