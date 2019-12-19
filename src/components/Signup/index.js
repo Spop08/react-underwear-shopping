@@ -100,3 +100,19 @@ render() {
                 onChange={this.handleemailChanged.bind(this)}
                 placeholder="Email"
             />
+          </div>
+            {this.state.error.email?<ul><li style={{textAlign:'center', color:'red', margin:'0px', padding:'0px', textAlign:'left'}}>{this.state.error.email[0]}</li></ul>:''} 
+            
+            <div className="input-group mb-4">
+              <div className="input-group-prepend">
+                <span className="input-group-text" id="basic-addon1">
+                  <i className="material-icons">fingerprint</i>
+                </span>
+              </div>
+              <input
+                type="tel"
+                className="form-control"
+                value={this.state.invite_token}
+                onChange={this.handleInviteTokenChanged.bind(this)}
+                placeholder="Invite Token"
+              />
