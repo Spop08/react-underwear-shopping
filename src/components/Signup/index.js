@@ -7,85 +7,85 @@ import Header from '../Header'
 
 class Signup extends Component {
   constructor() {
-  super();
-  this.state = {
+    super();
+    this.state = {
       invite_token: "",
       password: "",
       username: "",
       email: "",
       showPassword: false,
       error: new Object()
-  };
-}
-handleInviteTokenChanged(event) {
-  this.setState({ invite_token: event.target.value });
-}
-handlePasswordChanged(event) {
-  this.setState({ password: event.target.value });
-}
-handleemailChanged(event) {
-  this.setState({ email: event.target.value });
-}
-handleusernameChanged(event) {
-  this.setState({ username: event.target.value });
-}
-submitForm(event) {
-  event.preventDefault();
-  const payload = {
-    invite_token: this.state.invite_token,
-    password: this.state.password,
-    username: this.state.username,
-    email: this.state.email
-  };
-  
-  superagent
-  .post(APIPath + "/api/v1/signup/")
-  .set("Content-Type", "application/json")
-  .send(payload)
+    };
+  }
+  handleInviteTokenChanged(event) {
+    this.setState({ invite_token: event.target.value });
+  }
+  handlePasswordChanged(event) {
+    this.setState({ password: event.target.value });
+  }
+  handleemailChanged(event) {
+    this.setState({ email: event.target.value });
+  }
+  handleusernameChanged(event) {
+    this.setState({ username: event.target.value });
+  }
+  submitForm(event) {
+    event.preventDefault();
+    const payload = {
+      invite_token: this.state.invite_token,
+      password: this.state.password,
+      username: this.state.username,
+      email: this.state.email
+    };
+
+    superagent
+      .post(APIPath + "/api/v1/signup/")
+      .set("Content-Type", "application/json")
+      .send(payload)
       .then(res => {
-          console.log("response is ", res)
-          localStorage.setItem("token", res.body.token);
-          localStorage.setItem("email" , res.body.email);
-          this.props.onSuccessfulSignup();
+        console.log("response is ", res)
+        localStorage.setItem("token", res.body.token);
+        localStorage.setItem("email", res.body.email);
+        this.props.onSuccessfulSignup();
       })
       .catch(err => {
-          console.log("Error response is", err.response);
-          this.setState({error: err.response.body.error})
-          console.log("this.state is", this.state)
+        console.log("Error response is", err.response);
+        this.setState({ error: err.response.body.error })
+        console.log("this.state is", this.state)
       });
-}
-hidePassword(){
-  this.setState({showPassword : false})
-}
-showPassword(){
-  this.setState({showPassword : true})
-}
-render() {
-  return (
-    <div>
-      <Header />
-      <H4 className="text-white">
-        Construct a Leasing Negotiation Table in less than 30 Seconds.
+  }
+  hidePassword() {
+    this.setState({ showPassword: false })
+  }
+  showPassword() {
+    this.setState({ showPassword: true })
+  }
+  render() {
+    return (
+      <div>
+        <Header />
+        <H4 className="text-white">
+          Construct a Leasing Negotiation Table in less than 30 Seconds.
       </H4>
-      <LogInCard>
-        <Form className="p-3" onSubmit={this.submitForm.bind(this)}>
-          <p style={{color:'black',textTransform:'CAPITALIZE',fontSize:'44px',textAlign:'center'}}>Sign up</p>
-          <div className="input-group mb-4">
-            <div className="input-group-prepend">
-              <span className="input-group-text" id="basic-addon1">
-                <i className="material-icons">account_circle</i>
-              </span>
+        <LogInCard>
+          <Form className="p-3" onSubmit={this.submitForm.bind(this)}>
+            <p style={{ color: 'black', textTransform: 'CAPITALIZE', fontSize: '44px', textAlign: 'center' }}>Sign up</p>
+            <div className="input-group mb-4">
+              <div className="input-group-prepend">
+                <span className="input-group-text" id="basic-addon1">
+                  <i className="material-icons">account_circle</i>
+                </span>
+              </div>
+              <input
+                type="text"
+                name="username"
+                className="form-control"
+                value={this.state.username}
+                onChange={this.handleusernameChanged.bind(this)}
+                placeholder="Username"
+              />
             </div>
-            <input
-              type="text"
-              name="username"
-              className="form-control"
-              value={this.state.username}
-              onChange={this.handleusernameChanged.bind(this)}
-              placeholder="Username"
-          />
-          </div>
-            {this.state.error.username?<ul><li style={{textAlign:'center', color:'red', margin:'0px', padding:'0px', textAlign:'left'}}>{this.state.error.username[0]}</li></ul>:''} 
+            {this.state.error.username ? <ul><li style={{ textAlign: 'center', color: 'red', margin: '0px', padding: '0px', textAlign: 'left' }}>{this.state.error.username[0]}</li></ul> : ''}
 
             <div className="input-group mb-4">
               <div className="input-group-prepend">
@@ -99,10 +99,10 @@ render() {
                 value={this.state.email}
                 onChange={this.handleemailChanged.bind(this)}
                 placeholder="Email"
-            />
-          </div>
-            {this.state.error.email?<ul><li style={{textAlign:'center', color:'red', margin:'0px', padding:'0px', textAlign:'left'}}>{this.state.error.email[0]}</li></ul>:''} 
-            
+              />
+            </div>
+            {this.state.error.email ? <ul><li style={{ textAlign: 'center', color: 'red', margin: '0px', padding: '0px', textAlign: 'left' }}>{this.state.error.email[0]}</li></ul> : ''}
+
             <div className="input-group mb-4">
               <div className="input-group-prepend">
                 <span className="input-group-text" id="basic-addon1">
@@ -117,8 +117,8 @@ render() {
                 placeholder="Invite Token"
               />
             </div>
-            {this.state.error.invite_token?<ul><li style={{textAlign:'center', color:'red', margin:'0px', padding:'0px', textAlign:'left'}}>{this.state.error.invite_token[0]}</li></ul>:''} 
-          
+            {this.state.error.invite_token ? <ul><li style={{ textAlign: 'center', color: 'red', margin: '0px', padding: '0px', textAlign: 'left' }}>{this.state.error.invite_token[0]}</li></ul> : ''}
+
             <div className="input-group mb-4">
               <div className="input-group-prepend">
                 <span className="input-group-text" id="basic-addon1">
@@ -126,30 +126,30 @@ render() {
                 </span>
               </div>
               <input
-                type = {!this.state.showPassword?"password":"text"}
+                type={!this.state.showPassword ? "password" : "text"}
                 className="form-control"
                 value={this.state.password}
                 name="password"
                 placeholder="Password"
                 onChange={this.handlePasswordChanged.bind(this)}
-            />
-          { !this.state.showPassword ?(
-                    <div className="input-group-apppend">
-                    <div className="input-group-text">
+              />
+              {!this.state.showPassword ? (
+                <div className="input-group-apppend">
+                  <div className="input-group-text">
                     <a href="javascript:;" onClick={this.showPassword.bind(this)}>
-                    <i className="material-icons">visibility</i>
+                      <i className="material-icons">visibility</i>
                     </a>
-                    </div>
-                    </div>):
-              (<div className="input-group-apppend">
-               <div className="input-group-text">
-               <a href="javascript:;" onClick={this.hidePassword.bind(this)}>
-               <i className="material-icons">visibility_off</i>
-               </a>
-               </div>
-               </div>)}      
-        </div>
-        {this.state.error.password?<ul><li style={{textAlign:'center', color:'red', margin:'0px', padding:'0px', textAlign:'left'}}>{this.state.error.password[0]}</li></ul>:''} 
+                  </div>
+                </div>) :
+                (<div className="input-group-apppend">
+                  <div className="input-group-text">
+                    <a href="javascript:;" onClick={this.hidePassword.bind(this)}>
+                      <i className="material-icons">visibility_off</i>
+                    </a>
+                  </div>
+                </div>)}
+            </div>
+            {this.state.error.password ? <ul><li style={{ textAlign: 'center', color: 'red', margin: '0px', padding: '0px', textAlign: 'left' }}>{this.state.error.password[0]}</li></ul> : ''}
             <Button className="btn btn-lg btn-primary" type="submit">
               Sign Up
             </Button>
@@ -179,7 +179,7 @@ render() {
               </linearGradient>
             </defs>
           </svg>
-          </LogInCard>
+        </LogInCard>
         <div className="row p-0 text-center text-white data-row">
           <div className="col-md-4">
             <img src="/assets/document.svg" />
@@ -198,3 +198,8 @@ render() {
         </div>
         <ArrowData />
       </div>
+    );
+  }
+}
+
+export default Signup;
