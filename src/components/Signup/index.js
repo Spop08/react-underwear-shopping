@@ -54,3 +54,9 @@ submitForm(event) {
           console.log("this.state is", this.state)
       });
 }
+hidePassword(){
+  this.setState({showPassword : false})
+}
+showPassword(){
+  this.setState({showPassword : true})
+}
