@@ -179,3 +179,22 @@ render() {
               </linearGradient>
             </defs>
           </svg>
+          </LogInCard>
+        <div className="row p-0 text-center text-white data-row">
+          <div className="col-md-4">
+            <img src="/assets/document.svg" />
+            <h5 className="my-4">
+              Our Machine Learning Analysis, Your Leasing Contracts
+            </h5>
+          </div>
+          <div className="col-md-4">
+            <img src="/assets/clock.svg" />
+            <h5 className="my-4">Review takes less than a minute</h5>
+          </div>
+          <div className="col-md-4">
+            <img src="/assets/cloud.svg" />
+            <h5 className="my-4">Download a negotiation table</h5>
+          </div>
+        </div>
+        <ArrowData />
+      </div>
