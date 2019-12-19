@@ -17,3 +17,15 @@ class Signup extends Component {
       error: new Object()
   };
 }
+handleInviteTokenChanged(event) {
+  this.setState({ invite_token: event.target.value });
+}
+handlePasswordChanged(event) {
+  this.setState({ password: event.target.value });
+}
+handleemailChanged(event) {
+  this.setState({ email: event.target.value });
+}
+handleusernameChanged(event) {
+  this.setState({ username: event.target.value });
+}
