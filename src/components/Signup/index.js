@@ -29,3 +29,11 @@ handleemailChanged(event) {
 handleusernameChanged(event) {
   this.setState({ username: event.target.value });
 }
+submitForm(event) {
+  event.preventDefault();
+  const payload = {
+    invite_token: this.state.invite_token,
+    password: this.state.password,
+    username: this.state.username,
+    email: this.state.email
+  };
