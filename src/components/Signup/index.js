@@ -37,3 +37,20 @@ submitForm(event) {
     username: this.state.username,
     email: this.state.email
   };
+  
+  superagent
+  .post(APIPath + "/api/v1/signup/")
+  .set("Content-Type", "application/json")
+  .send(payload)
+      .then(res => {
+          console.log("response is ", res)
+          localStorage.setItem("token", res.body.token);
+          localStorage.setItem("email" , res.body.email);
+          this.props.onSuccessfulSignup();
+      })
+      .catch(err => {
+          console.log("Error response is", err.response);
+          this.setState({error: err.response.body.error})
+          console.log("this.state is", this.state)
+      });
+}
