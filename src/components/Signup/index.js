@@ -133,3 +133,19 @@ render() {
                 placeholder="Password"
                 onChange={this.handlePasswordChanged.bind(this)}
             />
+          { !this.state.showPassword ?(
+                    <div className="input-group-apppend">
+                    <div className="input-group-text">
+                    <a href="javascript:;" onClick={this.showPassword.bind(this)}>
+                    <i className="material-icons">visibility</i>
+                    </a>
+                    </div>
+                    </div>):
+              (<div className="input-group-apppend">
+               <div className="input-group-text">
+               <a href="javascript:;" onClick={this.hidePassword.bind(this)}>
+               <i className="material-icons">visibility_off</i>
+               </a>
+               </div>
+               </div>)}      
+        </div>
