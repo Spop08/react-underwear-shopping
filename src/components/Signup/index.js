@@ -116,3 +116,20 @@ render() {
                 onChange={this.handleInviteTokenChanged.bind(this)}
                 placeholder="Invite Token"
               />
+            </div>
+            {this.state.error.invite_token?<ul><li style={{textAlign:'center', color:'red', margin:'0px', padding:'0px', textAlign:'left'}}>{this.state.error.invite_token[0]}</li></ul>:''} 
+          
+            <div className="input-group mb-4">
+              <div className="input-group-prepend">
+                <span className="input-group-text" id="basic-addon1">
+                  <i className="material-icons">vpn_key</i>
+                </span>
+              </div>
+              <input
+                type = {!this.state.showPassword?"password":"text"}
+                className="form-control"
+                value={this.state.password}
+                name="password"
+                placeholder="Password"
+                onChange={this.handlePasswordChanged.bind(this)}
+            />
