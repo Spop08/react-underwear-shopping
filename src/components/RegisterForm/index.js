@@ -15,3 +15,17 @@ import APIPath from '../Api';
 import { accountActions } from '../../_actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
+
+const styles = theme => ({
+  root: {
+    fontFamily: theme.typography.fontFamily,
+    // padding: 20
+  },
+  footer: {
+    padding: '10px'
+  },
+  controls: {
+    margin: [[theme.spacing.unit * 2, 0]],
+    padding: theme.spacing.unit
+  }
+});
