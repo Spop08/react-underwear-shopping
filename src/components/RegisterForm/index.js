@@ -29,3 +29,38 @@ const styles = theme => ({
     padding: theme.spacing.unit
   }
 });
+
+class RegisterForm extends Component {
+  state = {
+    disableLocal: false,
+    disableRegister: true,
+    disableRegisterProviders: true,
+    registerFailed: '',
+    submitted: false
+  };
+
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    const {classes, loading, errors} = this.props;
+
+    const header = (
+        <div>
+        <div className="row">
+            <div className="col-md-4 col-5">
+                <Link
+                 to="/home"
+                 style={{textDecoration: 'inherit'}}
+                >
+                  <img className="logo" src="/assets/image/logo.png" ></img>
+                </Link>
+            </div>
+        </div>
+        <div className="register_title">
+            <p>Create Your Account</p>
+        </div>
+        </div>
+        
+    );
