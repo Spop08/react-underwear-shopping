@@ -87,3 +87,5 @@ class FeedPhoto extends React.Component{
         )
     }
 }
+
+export default withRouter(FeedPhoto);
