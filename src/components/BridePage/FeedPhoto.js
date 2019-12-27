@@ -46,4 +46,11 @@ class FeedPhoto extends React.Component{
         this.setState({hover: !this.state.hover});
         console.log("HOVER!!!!!!!!!!!!!!!");
     }
+    onDetail() {
+        
+        this.props.history.push({
+            pathname:'/bride/detail_page',
+            state: {lolstate:this.props.info.lol, info:this.props.info, is_gift:0}
+        });
+    }
 }
