@@ -35,3 +35,27 @@ const Styles = theme => ({
 
   paper: {}
 });
+
+class ProfilePage extends Component {
+  static defaultProp = {
+    user: {
+      loggedIn: false,
+      user: {
+        key: null
+      }
+    }
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+      setOpen: false,
+      loved: false,
+      bras: false,
+      panties: false,
+      lingerie: false,
+      victoria: false,
+      zaful: false
+    }
+  }
+}
