@@ -53,4 +53,37 @@ class FeedPhoto extends React.Component{
             state: {lolstate:this.props.info.lol, info:this.props.info, is_gift:0}
         });
     }
+    render(){
+        const lol = this.state.lol
+        const { ...props } = this.props;
+        return(
+                <Card className="product-list" {...props} >
+                    <img src={this.props.info.product_imageurl[0]} style={{width:'100%'}}></img>
+                    <div className="product-opac">
+                        <p>{this.props.info.product_name}</p>
+                        <p>{this.props.info.price}</p>
+                    </div>
+
+                    <div className="product-feed">
+                        {(lol === 1 ? <img className="product-like hide-hover" src="/assets/image/ULike.png"></img>
+                        :(lol === 2 && <img className="product-love hide-hover" src="/assets/image/Love.png"></img>))}
+                        {(lol === 1 ? <img className="product-like show-hover" src="/assets/image/ULike.png" onClick ={() => this.lolChange(0)}></img>
+                                    : <img className="product-like show-hover" src="/assets/image/Like.png" onClick ={() => this.lolChange(1)}></img>)}
+                        {(lol === 2 ? <img className="product-love show-hover" src="/assets/image/Love.png" onClick ={() => this.lolChange(0)}></img>
+                                    :<img className="product-love show-hover" src="/assets/image/ULove.png" onClick ={() => this.lolChange(2)}></img>)}
+                    </div>
+                    <Button
+					className='btn_friend details'
+					classes={{
+					label: "add_friend"
+					}}
+					style={{
+					marginTop: '0px'
+                    }}
+                    onClick = {this.onDetail}>
+                        DETAILS > > >
+                    </Button>
+                </Card>
+        )
+    }
 }
