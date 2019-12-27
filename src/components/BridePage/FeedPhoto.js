@@ -42,4 +42,8 @@ class FeedPhoto extends React.Component{
         portfolioService.changeLOL({uniq_id:this.props.info.uniq_id, lol:state})
         
     }
+    toggleHover() {
+        this.setState({hover: !this.state.hover});
+        console.log("HOVER!!!!!!!!!!!!!!!");
+    }
 }
