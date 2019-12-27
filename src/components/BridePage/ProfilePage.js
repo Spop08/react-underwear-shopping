@@ -58,4 +58,47 @@ class ProfilePage extends Component {
       zaful: false
     }
   }
+  componentDidMount() {
+
+    var jData = [];
+    const {user, dispatch} = this.props;
+    dispatch(accountActions.me(user));
+    portfolioService
+      .getGiftList()
+      .then((response) => {
+        const selectedPT1 = [];
+        const selectedPT2 = [];
+        const selectedPT3 = [];
+        const selectedPT4 = [];
+        let tCnt = 0;
+        jData = response.data;
+        jData.map(i => {
+          switch (tCnt % 4) {
+            case 0:
+              selectedPT1.push(i);
+              break;
+            case 1:
+              selectedPT2.push(i);
+              break;
+            case 2:
+              selectedPT3.push(i);
+              break;
+            case 3:
+              selectedPT4.push(i);
+              break;
+          }
+          tCnt++;
+        })
+        
+        this.setState({
+          portfolios: jData,
+          gifts: response.data,
+          tCnt: tCnt,
+          selectedPT1: selectedPT1,
+          selectedPT2: selectedPT2,
+          selectedPT3: selectedPT3,
+          selectedPT4: selectedPT4
+        })
+      })
+  }
 }
