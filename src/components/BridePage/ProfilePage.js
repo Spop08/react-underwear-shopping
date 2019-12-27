@@ -124,4 +124,42 @@ class ProfilePage extends Component {
     this.setProducts();
     console.log(this.state);
   }
+  setProducts() {
+    const selectedPT1 = [];
+    const selectedPT2 = [];
+    const selectedPT3 = [];
+    const selectedPT4 = [];
+    var tCnt = 0;
+    this
+      .state
+      .portfolios
+      .map(i => {
+        if (
+            ((i.brand_name === 'Zaful' && this.state.zaful) ||
+             (i.brand_name !== 'Zaful' && this.state.victoria) ||
+             (!this.state.zaful && !this.state.victoria)) &&
+            ((i.lol === 2 && this.state.loved === true) ||
+            (i.product_category === "Bras" && this.state.bras === true) ||
+            (i.product_category === "Panties" && this.state.panties === true) ||
+            (i.product_category === "Lingerie" && this.state.lingerie === true) ||
+            (this.state.loved === false && this.state.bras === false && this.state.panties === false && this.state.lingerie === false))) {
+          switch (tCnt % 4) {
+            case 0:
+              selectedPT1.push(i);
+              break;
+            case 1:
+              selectedPT2.push(i);
+              break;
+            case 2:
+              selectedPT3.push(i);
+              break;
+            case 3:
+              selectedPT4.push(i);
+              break;
+          }
+          tCnt++;
+        }
+      })
+    this.setState({tCnt: tCnt, selectedPT1: selectedPT1, selectedPT2: selectedPT2, selectedPT3: selectedPT3, selectedPT4: selectedPT4})
+  }
 }
