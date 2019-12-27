@@ -101,4 +101,27 @@ class ProfilePage extends Component {
         })
       })
   }
+  handleChange = name => event => {
+    this.setState({[name]: event.target.checked});
+    if (name === "loved") {
+      this.state.loved = event.target.checked;
+    }
+    if (name === "bras") {
+      this.state.bras = event.target.checked;
+    }
+    if (name === "panties") {
+      this.state.panties = event.target.checked;
+    }
+    if (name === "lingerie") {
+      this.state.lingerie = event.target.checked;
+    }
+    if (name === "victoria") {
+      this.state.victoria = event.target.checked;
+    }
+    if (name === "zaful") {
+      this.state.zaful = event.target.checked;
+    }
+    this.setProducts();
+    console.log(this.state);
+  }
 }
