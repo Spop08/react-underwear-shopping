@@ -20,3 +20,18 @@ import BHeader from '../BHeader'
 import Checkbox from '@material-ui/core/Checkbox';
 import {FormControlLabel} from '@material-ui/core';
 import FormGroup from '@material-ui/core/FormGroup';
+
+const Styles = theme => ({
+  login: {
+    width: "41.78px",
+    height: "17px",
+    font_family: "Montserrat",
+    font_size: "24px",
+    font_weight: 400,
+    line_height: "17px",
+    text_align: "center",
+    letter_spacing: "0.3818184px"
+  },
+
+  paper: {}
+});
