@@ -89,3 +89,47 @@ class RegisterForm extends Component {
       </div>
     );
   }
+  
+
+  handleChange = name => event => {
+    this.setState({[name]: event.target.checked});
+  };
+
+  handleLogin = content => {
+    alert(`Logging in with content '${JSON.stringify(content)}'`);
+  };
+
+  handleLoginWithProvider = providerId => {
+    alert(`Logging in with provider '${providerId}'`);
+  };
+
+  handleRegister = content => {
+    const payload = {
+      firstname : content['firstname'],
+      lastname : content['lastname'],
+      email: content['email'],
+      brasize: content['brasize'],
+      pantysize: content['pantysize'],
+      topsize: content['topsize'],
+      bottomsize: content['bottomsize'],
+      password1 : content['password'],
+      password2 : content['repeated_password']
+    };
+    this.setState({submitted: true});
+    this.props.dispatch(accountActions.register(payload))
+  };
+
+  handleRegisterWithProvider = providerId => {
+    alert(`Registering with provider '${providerId}'`);
+  };
+}
+function mapStateToProps(state) {
+  const { registering, errors } = state.registration;
+  console.log("Register Error:",state.registration);
+  return {
+    loading: registering,
+    errors: errors
+  };
+}
+
+export default withRouter(connect(mapStateToProps)(withStyles(styles)(RegisterForm)));
